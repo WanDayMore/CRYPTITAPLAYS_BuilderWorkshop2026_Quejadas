@@ -104,6 +104,7 @@ export default function ProfileCard({ portfolio, isOrbiting = false }: ProfileCa
             Flip
           </button>
 
+
           <CardFrontFace
             portfolio={portfolio}
             photoSrc={PROFILE_PHOTO_PATH}
