@@ -16,7 +16,7 @@ const CHAIN_THEMES: Record<ChainId, ChainTheme> = {
   sui: {
     id: 'sui',
     name: 'Sui',
-    primary: '#4DA2FF',
+    primary: '#FFFFFF',
     primaryRgb: '77, 162, 255',
     molten: {
       color1: '#0B3D7A',

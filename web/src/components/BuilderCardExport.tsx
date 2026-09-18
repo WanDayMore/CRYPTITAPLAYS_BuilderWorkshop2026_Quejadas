@@ -40,7 +40,7 @@ const BuilderCardExport = forwardRef<HTMLDivElement, BuilderCardExportProps>(
             <div className="builder-card-export__surface-wash" />
             <div className="builder-card-export__surface-vein" />
           </div>
-
+      
 
           <div className="builder-card-export__cards">
             <div className="builder-card-export__card-wrap builder-card-export__card-wrap--front">
