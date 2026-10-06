@@ -2,13 +2,11 @@ import { useEffect, useRef, useState, type RefObject } from 'react';
 import CardPhotoExport from './components/CardPhotoExport';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import MoltenMetal from './components/MoltenMetal';
+import InstitutionBackground from './components/MoltenMetal';
 import ProfileCard from './components/ProfileCard';
 import SocialActions from './components/SocialActions';
 import { usePortfolio } from './hooks/usePortfolio';
-import { getActiveChainTheme } from './lib/chainTheme';
-
-const chainTheme = getActiveChainTheme();
+import campusImage from './assets/campus.jpg'; // your school photo
 
 const CARD_WIDTH = 1020;
 const CARD_ASPECT = 1.56;
@@ -100,10 +98,12 @@ export default function App() {
 
   return (
     <div className="app-root">
-      <MoltenMetal
-        color1={chainTheme.molten.color1}
-        color2={chainTheme.molten.color2}
-        color3={chainTheme.molten.color3}
+      <InstitutionBackground
+        className="app-bg"
+        image={campusImage}
+        primaryColor="#0A2A7A" // blue
+        accentColor="#C8102E" // red
+        lightColor="#FFFFFF" // white
       />
       <Header ref={headerRef} />
       <main
