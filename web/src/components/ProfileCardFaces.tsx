@@ -3,6 +3,7 @@ import { objectId as configuredObjectId, suiscanObjectUrl } from '../config';
 import { PROFILE_PHOTO_PATH } from '../lib/profilePhoto';
 import type { UsePortfolioResult } from '../types';
 import BrandIcon from './BrandIcon';
+import SCHOOL_LOGO from '../assets/mcl_logo.webp';
 
 export function truncateValue(value: string): string {
   if (!value) return '—';
@@ -26,7 +27,6 @@ type CardFaceProps = {
   backFaceTabIndex?: number;
   backFaceAriaHidden?: boolean;
 };
-
 export function CardFrontFace({
   portfolio,
   photoSrc = PROFILE_PHOTO_PATH,
@@ -54,6 +54,7 @@ export function CardFrontFace({
     status === 'empty' ? 'Not configured' : status === 'error' ? 'Unavailable' : '—';
 
   const renderPhoto = showPhoto && !forcePhotoFallback;
+  
 
   return (
     <div className="card-side card-front">
@@ -82,6 +83,9 @@ export function CardFrontFace({
             />
           </div>
         </div>
+        <div className="school-logo-tab">
+        <img src={SCHOOL_LOGO} alt="Mapúa Malayan Colleges Laguna" />
+      </div>
       </div>
 
       <div className="card-main">
